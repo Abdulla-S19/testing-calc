@@ -43,3 +43,11 @@ export const RATE_C = 0.3;
 export function mod(a:number,b:number){
   return a % b;
 }
+
+/** Returns the average of the numbers, or 0 if the list is empty. */
+export function average(numbers: number[]): number {
+  if (numbers.length === 0) {
+    return 0;
+  }
+  return numbers.reduce((sum, number) => sum + number, 0) / numbers.length;
+}
