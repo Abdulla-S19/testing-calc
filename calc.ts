@@ -18,7 +18,23 @@ export function multiply(a: number, b: number): number {
   return a * b;
 }
 
-/** Divides a by b and returns the quotient. */
+/** Divides a by b and returns the quotient. Throws if b is 0. */
 export function divide(a: number, b: number): number {
+  if (b === 0) {
+    throw new Error("Division by zero");
+  }
   return a / b;
 }
+
+/** Returns the square root of a. */
+export function squareRoot(a: number): number {
+  return Math.sqrt(a);
+}
+
+/** Returns value as a percentage of total, e.g. percentage(25, 200) === 12.5. Throws if total is 0. */
+export function percentage(value: number, total: number): number {
+  return divide(value, total) * 100;
+}
+export const RATE_A = 0.1;
+export const RATE_B = 0.2;
+export const RATE_C = 0.3;
