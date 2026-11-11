@@ -38,3 +38,8 @@ export function percentage(value: number, total: number): number {
 export const RATE_A = 0.1;
 export const RATE_B = 0.2;
 export const RATE_C = 0.3;
+
+
+export function mod(a:number,b:number){
+  return a % b;
+}
